@@ -1,0 +1,236 @@
+/* ligth mode or dark mode theme */
+:root{
+    --bg-clr-hr: radial-gradient(circle, #3feaff 0%, rgba(83,83,83,1) 100%);
+    --bg-clr-fr: #4b4a48;
+    --bg-clr-con: rgb(83, 83, 83);
+    --clr-p-tag: snow;
+    --clr-act-sel: #3feaff;
+}
+body.light{
+    --bg-clr-hr: radial-gradient(circle, rgba(148,187,233,100) 0% , rgba(238,205,174,100));
+    --bg-clr-con: rgb(247, 241, 241);
+
+    --bg-clr-fr: rgb(255, 255, 255);
+    --clr-p-tag: rgb(83, 83, 83);
+    --clr-act-sel: rgba(148,187,233,100);
+}
+/* font */
+@font-face {
+    font-family: "Samim-FD";
+    src: url(fonts/Samim-FD.woff) format("woff");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Samim-FD" , sans-serif;
+}
+/* header */
+.header-title{
+    width: 100%;
+    height: 45vh;
+    background: var(--bg-clr-hr) center center/cover no-repeat;
+}
+.title{
+    width: 50%;
+    margin: auto;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10vh;
+}
+.title h3{
+    color: snow;
+    font-size: 24px;
+    font-weight: bold;
+}
+#btn-change-theme{
+    background: none;
+    border: 0;
+}
+/* container */
+.container{
+    width: 100%;
+    position: relative;
+    bottom: 110px;
+}
+.division-elment{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-clr-con);
+    border-radius: 6px;
+}
+#btn-plus{
+    border: 2px solid snow;
+    border-radius: 50%;
+    background-color: var(--bg-clr-con);
+    color: snow;
+    padding: 10px;
+}
+#btn-plus:hover{
+    color: rgb(212, 212, 212);
+    border-color: rgb(212, 212, 212);
+}
+.second-sec-inp{
+    width: 90%;
+}
+.input-do{
+    padding: 10px;
+    width: 100%;
+    color: snow;
+    background-color: var(--bg-clr-con);
+    border: none;
+}
+.input-do:hover{
+    border: none;
+}
+.toDoList{
+    width: 50%;
+    margin: 20px auto;
+    list-style-type: none;
+    background-color: var(--bg-clr-con);
+    color: snow;
+    border-radius: 6px;
+    margin-bottom: 0;
+}
+.toDo-cards{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #b7b7b7;
+}
+.toDo-cards p{
+    direction: rtl;
+    color: var(--clr-p-tag);
+}
+.text-input{
+    font-size: 16px;
+    font-weight: bold;
+}
+.clear-info{
+    background: var(--bg-clr-con);
+    border: none;
+    opacity: 0;
+}
+.toDo-cards:hover .clear-info{
+    opacity: 1;
+}
+/* second cards */
+.second-cards{
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-clr-con);
+    border-radius: 0px 0px 10px 10px;
+}
+.left-over{
+    color: var(--clr-p-tag);
+    font-size: 16px;
+    font-weight: bold;
+}
+.second-cards-nav{
+    direction: rtl;
+}
+.second-cards-nav button{
+    background-color: var(--bg-clr-con);
+    color: var(--clr-p-tag);
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    padding: 0 5px;
+}
+.second-cards-nav button:hover{
+    color: #888888;
+}
+.second-cards-nav .on{
+    color: var(--clr-act-sel);
+}
+
+.clear-compilte-cards{
+    color: var(--clr-p-tag);
+    background-color: var(--bg-clr-con);
+    border: 0;
+    font-weight: bold;
+}
+/* footer */
+.container-fr{
+    background-color: var(--bg-clr-fr);
+    min-height: 55vh;
+    height: auto;
+}
+.first-footer{
+    background-color: var(--bg-clr-fr);
+}
+.first-footer p{
+    direction: rtl;
+    background-color: var(--bg-clr-fr);
+    color: var(--clr-p-tag);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+}
+/* media queries*/
+@media screen and (max-width: 720px){
+    .title{
+        width: 70%;
+    }
+    .division-elment{
+        width: 70%;
+    }
+    .toDoList{
+        width: 70%;
+    }
+    .second-cards{
+        width: 70%;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 520px){
+    .title{
+        width: 90%;
+    }
+    .division-elment{
+        width: 90%;
+    }
+    .toDoList{
+        width: 90%;
+    }
+    .second-cards{
+        width: 90%;
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+/* css for add event */
+.draging{
+    opacity: 0.1;
+}
+/* filter todos {complite , active , checked , faild} */
+.complited{
+    
+}
+#active{
+
+}
+.checked p{
+ text-decoration-line: line-through;
+ opacity: 0.5;
+}
+.faild{
+    display: none;
+}

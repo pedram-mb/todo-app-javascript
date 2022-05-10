@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>ToDoApp</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header-title">
+        <div class="title">
+            <h3>لیست وظایف</h3>
+            <button id="btn-change-theme">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACCklEQVRIS9VWi03DQAztbVA2CBuUCUg3gA3SEZgAmAA2oBsAE9ANyAZkg3aD4FfZh3vxXdwIEVGpUpvz+fk9/xIWM33CTLiLScB931cUcMNBb0MI3bkEpgLXBPTBYGsC3v1/YJJzRSyWFhs6G2XMNge631pqmFIzKKRc0teUkh3DZ0vOD9o5n72qVAzAc8CaEe6786hAETQCuqPAtinrbHEpOXF5Q5ffElZIBaQ8qWhW67MECj/FqmZw5PkISv/B4p6+DadBYgGjRwmCwVcWU7ngbqck71a9QJlbb2u5gJnpl2IJBd4Z/ZoVwF+AX3kGihf4RTkHqzTfNZ3LQMEk21iS6GcRmMdgpQ5jm9AZ2OIs65RsJDgU3IWqCRShfDpRQwM/0CkKRz7HFlJViucDtmJMdjf0W3r3EgDJoIEpChA4P1VNRjlgVPKeAdCTz5aMCTDy3HqBIWVOagAjgJLUEniUmuWui1JbLJSMurgGU4zZwgbB7YjtuuTvROoRYC03TCE32gnPpZ1kRCIwczFoDFc7KcmkZaw4s3PZMvaMzLjaeJA8kaNGOQMgGGKedxxkdqXKvbElkV1tsm/JEXozrkXPSs3m2LvaLAmNFjJXaulFILvaWHKZSLkXAdSDuVKLVV1abWe8+sSVmqrjrmp90QP8K32cOpkTuFIt9Xcv9GMyes4n5djjeMzmG/HNLi5LcrQbAAAAAElFTkSuQmCC"/>
+            </button>
+        </div>
+    </header>
+    <!-- container -->
+    <div class="container-fr">
+        <section class="container">
+            <div class="division-elment">
+                <div class="first-sec-btn">
+                    <button id="btn-plus">+</button>
+                </div>
+                <div class="second-sec-inp">
+                    <label for="addf"></label>
+                    <input type="text" id="addf" class="input-do" placeholder="افزودن وظیفه ی جدید ..." dir="rtl" spellcheck="false" autocomplete="off" >
+                </div>
+                <div class="div-clear">
+                    <img class="clear-btn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABCklEQVRIS+2V0Q3CMAxEmw0YgRXYACYANoCJEBMwAt0ARmAUNgh3UiJVpXYcV6J8JFJ+GsfPvthu6BZaYSFu18A/U75J/T9SxxhXiOaGfQ0hPLXIYHvC+R52x1IGxTeGszucHJKjnQRP0AvsGGhfglvAWzh6DDL4go+gb9ieAe61rItgXoZjEe6B0qcJLMHxfY2d5TVlmlUwgwU4YXzTKmhVxjnSCdmroV4wWybLm+MRq10qsFqph9AsswtuBk9Vb3pbtdVmZay1jNZqs/rY0qceuCp1mtMcmRwgavWO4C9Mrs3cjNmnhPMnoY7BBGfFs8oZqLjMxaU58Zw1sEc1150mtUs2z6XFpP4Aw0N7H8sLgmQAAAAASUVORK5CYII="/>
+                </div>
+            </div>
+            <ul class="toDoList">
+                
+            </ul>
+            <div class="second-cards">
+                <div class="first-section-left">
+                    <p class="left-over"> <span id="number-cards"> 0 </span>مورد باقی مانده </p>
+                </div>
+                <div class="second-cards-nav">
+                    <button id="all" class="on">همه</button>
+                    <button id="active" >فعال</button>
+                    <button id="complited">تکمیل</button>
+                </div>
+                <div class="second-crd-cl">
+                    <button class="clear-compilte-cards">
+                        حذف تکمیل شده ها 
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- footer -->
+    <footer class="first-footer">
+        <p>
+            برای مرتب کردن وظایف مورد نظر می توانید انهارا بکشید و رها کنید . Drag And Drop
+        </p>
+    </footer>
+    <script src="/assets/main.js"></script>
+</body>
+</html>
